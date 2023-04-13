@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             x:Class="FirstApp.MainPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Devexpress DateEditors!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <dxe:TextEdit
+                Text="{Binding Login, Mode=TwoWay}"
+                HasError="{Binding LoginHasError}"
+                LabelText="Login"
+                HelpText="*Required"
+                ErrorText="Login is required"
+                PlaceholderText="Enter login"
+                MaxCharacterCount="9"
+                MaxCharacterCountOverflowMode ="LimitInput"
+                BoxMode ="Filled"
+                BackgroundColor="Beige"/>
+            <dxe:PasswordEdit
+                Text="{Binding Password, Mode=TwoWay}"
+                HasError="{Binding PasswordHasError}"
+                LabelText="Password"
+                HelpText="*Required"
+                ErrorText="The password should contain more than 5 characters, 
+                    have at least one uppercase and one lowercase letter, and one number."
+                PlaceholderText="Enter password"/>
+            <dxe:DateEdit
+                Date="{Binding BirthDate, Mode=TwoWay}"
+                LabelText="Birth date"
+                TextHorizontalAlignment="End"
+                IsDateIconVisible="False"
+                ClearIconVisibility="Auto"
+                DisplayFormat="d"
+                PlaceholderText="Enter birth date"/>
+            
+            <dxe:DateEdit
+                Date="{Binding BirthDate, Mode=TwoWay}"
+                LabelText="Birth date"
+                TextHorizontalAlignment="End"
+                IsDateIconVisible="False"
+                ClearIconVisibility="Auto"
+                DisplayFormat="d"
+                PlaceholderText="Enter birth date"/>
+            <dxe:TextEdit
+                Text="{Binding Phone, Mode=TwoWay}"
+                LabelText="Phone"
+                Mask="(000) 000-0000"
+                ErrorText="Incorrect phone number"
+                HelpText="Do not include a country code"
+                Keyboard="Telephone"
+                PlaceholderText="Enter phone number"/>
+            <dxe:MultilineEdit
+                Text="{Binding Notes, Mode=TwoWay}"
+                MinLineCount="2"
+                MaxLineCount="4"
+                LabelText="Notes"
+                MaxCharacterCount="100"/>
+            <dxco:SimpleButton Text="SUBMIT" FontAttributes="Bold" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
