@@ -10,7 +10,8 @@ public partial class MainPage : ContentPage
 
 	private async void OnCounterClicked(object sender, EventArgs e)
 	{
-        await Shell.Current.GoToAsync("DevGrid");
+        // await Shell.Current.GoToAsync("DevGrid");
+        await Shell.Current.GoToAsync("DataForm");
     }
 }
 

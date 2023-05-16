@@ -16,24 +16,37 @@
             <dxe:TextEdit x:Name="person_textTbox" Grid.Column="1"/>
 
         </Grid>
-        <Grid ColumnDefinitions=".40*,.60*">
+        <Grid ColumnDefinitions=".20*,.80*" x:Name="parentGrid">
 
             <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" Grid.Column="0" />
 
-            <dxe:ComboBoxEdit x:Name="person_ComboBox" Grid.Column="1"
-                              TextHorizontalAlignment="Start"
-                              TextVerticalAlignment="Start"
-                              DropDownItemPadding="5,20"
-                              
-                              IsDropDownIconVisible="True"
-                              LabelText="Workflow"
-                   
-                              
-                             
-                              />
+     
+
+
+        </Grid>
+        <Grid ColumnDefinitions=".20*,.80*" x:Name="parentGrid2">
+
+            <Label 
+            Text="Welcome to "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Grid.Column="0" />
+
+
+
+
+        </Grid>
+        <Grid ColumnDefinitions=".20*,.80*" x:Name="parentGrid3">
+
+            <Label 
+            Text="Welcome to "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Grid.Column="0" />
+
+
+
 
         </Grid>
         <Button Text="Click to Rotate Text!"
@@ -41,6 +54,9 @@
                 HorizontalOptions="Center"
                 Clicked="OnCounterClicked"
                  />
+        <ListView x:Name="PersonListView">
+            
+        </ListView>
         
     </VerticalStackLayout>
     

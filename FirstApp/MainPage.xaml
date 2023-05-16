@@ -39,7 +39,7 @@
                 MaxCharacterCount="9"
                 MaxCharacterCountOverflowMode ="LimitInput"
                 BoxMode ="Filled"
-                BackgroundColor="Beige"/>
+                BackgroundColor="LightGoldenrodYellow"/>
             <dxe:PasswordEdit
                 Text="{Binding Password, Mode=TwoWay}"
                 HasError="{Binding PasswordHasError}"
@@ -79,6 +79,19 @@
                 MaxLineCount="4"
                 LabelText="Notes"
                 MaxCharacterCount="100"/>
+            
+            <dxe:ComboBoxEdit x:Name="person_ComboBox" 
+                              TextHorizontalAlignment="Start"
+                              TextVerticalAlignment="Start"
+                              DropDownItemPadding="5,20"
+                              
+                              IsDropDownIconVisible="True"
+                              LabelText="Workflow"
+                   
+                              
+                             
+                              />
+            
             <dxco:SimpleButton Text="SUBMIT" FontAttributes="Bold" />
 
             <Button

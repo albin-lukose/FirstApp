@@ -6,5 +6,6 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
         Routing.RegisterRoute("DevGrid", typeof(DevGrid));
+        Routing.RegisterRoute("DataForm", typeof(DataFormExample));
     }
 }
